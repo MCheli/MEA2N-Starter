@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  APP_URL: "Heroku URL Here"
+
 };
