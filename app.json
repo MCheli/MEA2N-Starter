@@ -1,0 +1,21 @@
+{
+  "name": "MEA2N-Starter",
+  "description": "",
+  "scripts": {
+  },
+  "env": {
+    "APPURL": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
