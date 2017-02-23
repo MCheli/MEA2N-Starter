@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.sendFile('index.html');
 });
 
+router.get('/api', function(req, res, next){
+  res.send(process.env.APPURL);
+});
+
 module.exports = router;
