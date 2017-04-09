@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "develop": "npm run start"
+    "develop": "MONGODB_URI=mongodb://heroku_3v9bxw24:t2hucl7dn9qja01u2v9p1nvd25@ds157380.mlab.com:57380/heroku_3v9bxw24 npm run start"
   },
   "dependencies": {
     "body-parser": "~1.15.1",
