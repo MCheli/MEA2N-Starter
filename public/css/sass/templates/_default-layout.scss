@@ -1,12 +1,12 @@
 // Default Layout
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: Lato, Arial, sans-serif;
-}
-
-header {
+  max-width: 1920px;
   margin: 0 auto;
-  max-width: 992px;
+  min-height: 100vh;
 }
 
 h1 {
@@ -15,22 +15,23 @@ h1 {
   background-size: contain;
   display: block;
   height: 90px;
+  width: 300px;
+
+  @include bp(baby-bear) {
+    width: auto;
+  }
 }
 
 #mainBody {
-  background: url(../img/Spaceship4C.jpg) -330px 0 no-repeat;
-  bottom: 0;
-  left: 0;
-  margin: 0 auto;
-  max-width: 992px;
-  position: absolute;
-  right: 0;
-  top: 100px;
+  background: url(../img/Spaceship4C.jpg) right 0 no-repeat;
+  display: flex;
+  flex: 1;
+  margin: 0;
+  position: relative;
 
   &:before {
     background-color: #3d4647;
     content: '';
-    display: block;
     height: 100%;
     opacity: .55;
     position: absolute;
@@ -38,53 +39,54 @@ h1 {
     z-index: 1;
   }
 
-  h2 {
-    color: $white;
-    float: right;
-    font-weight: normal;
-    margin: 7rem 2rem 0 450px;
-    position: relative;
-    z-index: 3;
+  header {
+    flex: 1;
   }
 
-  @include bp(baby-bear) {
-    background-position: -500px -200px;
+  h2 {
+    color: $white;
+    font-weight: normal;
+    margin: 7rem 1rem 0 45px;
+    position: relative;
+    z-index: 3;
 
-    h2 {
-      float: none;
-      text-align: center;
-      margin: 3rem 0;
+    @include bp(baby-bear) {
+      border: 0;
+      clip: rect(0 0 0 0);
+      position: absolute;
+      overflow: hidden;
+      margin: -1px;
+      padding: 0;
+      width: 1px;
+      height: 1px;
     }
-
   }
 }
 
 article {
   background: $teal;
   color: $white;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  position: absolute;
-  width: 400px;
-  top: 0;
+  padding-top: 3rem;
+  flex: 0 0 22em;
+  order: -1;
   z-index: 3;
 
-  @include bp(baby-bear) {
-    top: 150px;
+  @include bp(tiny-bear) {
+    flex: none;
     width: 100%;
   }
 
   p {
-    padding: 3rem 2rem 1.5rem;
+    padding: 0 2rem 1rem;
   }
 
-  legend {
+  legend, label {
     @extend %visuallyhidden;
   }
 
   fieldset {
     border: none;
+    margin-bottom: 3rem;
     padding: 0 2rem;
   }
 
@@ -102,13 +104,28 @@ article {
 
   input {
     color: $greyDark;
-    margin-right: 1rem;
-    padding: .7rem;
+    margin-right: .2rem;
+    padding: .7rem 4%;
 
     @include bp(tiny-bear) {
-      width: 91%;
+      width: 92%;
     }
   }
+}
+
+#courseList {
+  list-style: none;
+  margin-top: 0;
+  padding: 0 2rem;
+
+  li {
+    line-height: 130%;
+    margin-bottom: .8rem;
+  }
+}
+
+p+p {
+  text-indent: 0;
 }
 
 footer {
@@ -116,7 +133,7 @@ footer {
   color: $white;
   left: 0;
   margin: 0 auto;
-  max-width: 992px;
+  max-width: 1920px;
   position: absolute;
   right: 0;
   z-index: 3;
@@ -128,5 +145,10 @@ footer {
     height: 30px;
     font-size: 80%;
     margin: 0 2rem 1rem;
+
+    @include bp(tiny-bear) {
+      background: none;
+      text-align: center;
+    }
   }
 }
