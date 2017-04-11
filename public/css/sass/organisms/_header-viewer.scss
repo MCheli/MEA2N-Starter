@@ -1,0 +1,33 @@
+// Sidebar Controls
+
+#mainHeader {
+  background: $wbt;
+  border-right: 1px solid $border;
+  height: 100px;
+
+  h1 {
+    @extend %icon-course;
+    @extend .typl8-zeta;
+    color: $white;
+    line-height: 1.3;
+    padding: 14px 14px 0 90px;
+
+    &:before {
+      font-size: 1.2em;
+      display: inline-block;
+      left: 60px;
+      position: absolute;
+      top: 16px;
+    }
+  }
+
+  #backTo a {
+    @extend %icon-arrow-left;
+    @include fontIconButton(darken($blue, 5%), $white, 20px, 14px);
+    font-size: 1.1em;
+    left: 0;
+    padding: 40px 18px 40px 12px;
+    position: absolute;
+    top: 0;
+  }
+}

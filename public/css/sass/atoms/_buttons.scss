@@ -1,0 +1,77 @@
+// Button Hover/Focus/Active Color Changes
+
+@mixin buttonStateChange($color, $backgroundColor) {
+  @extend %transition-ease;
+  background: $backgroundColor;
+  color: $color;
+
+  &:hover, &:focus {
+    background: darken($backgroundColor, $hoverFocusShading);
+  }
+
+  &:active {
+    background: darken($backgroundColor, $activeShading);
+  }
+}
+
+// Buttons
+
+button, .button {
+  @include buttonStateChange($white, $primaryButton);
+  border: none;
+  border-radius: 2px;
+  padding: .5rem .7rem;
+}
+
+@mixin fontIconButton($buttonWidth) {
+  @include fonticonHiddenText;
+  height: $buttonWidth;
+  width: $buttonWidth;
+}
+
+// Font-icon buttons. Had to create multiple background color choices due to a limnitation in libsass (doesn't consider transparent as a color to lighten or darken, fixed in ruby sass 3.4)
+  // Transitions
+
+    $transition-ease: all 0.3s ease;
+    $transition-ease-in: all 0.3s linear;
+
+
+@mixin fontIconButton($backgroundColor, $color, $iconHeight, $iconWidth) {
+  background: $backgroundColor;
+  color: $color;
+  height: $iconHeight;
+  transition: $transition-ease;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  text-indent: 1000%;
+  white-space: nowrap;
+  width: $iconWidth;
+
+  &:hover, &:focus {
+    color: darken($color, $hoverFocusShading);
+    background: darken($backgroundColor, $hoverFocusShading);
+  }
+
+  &:active, &.active {
+    color: darken($color, $activeShading);
+    background: darken($backgroundColor, $activeShading);
+  }
+
+  &:disabled {
+    background: lighten($backgroundColor, 12%);
+
+    &:before {
+      opacity: .5;
+    }
+  }
+
+  &:before, &:after {
+    display: block;
+    opacity: 1;
+    padding: 0 !important;
+    position: absolute;
+    text-indent: 0;
+    transition: opacity 0.3s ease;
+  }
+}

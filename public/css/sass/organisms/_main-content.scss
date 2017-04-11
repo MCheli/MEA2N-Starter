@@ -1,0 +1,96 @@
+// #mainContent
+
+#mainContent {
+  background: $white;
+
+  h1 {
+    @extend .typl8-gamma;
+  }
+
+  > section {
+    border-bottom: 1px solid $greyLight;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+section {
+  display: block;
+  margin: 2rem 0 2rem;
+}
+
+[itemprop="transcript"] {
+}
+
+video {
+  border: 1px solid $border;
+}
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  font-size: $typl8-small-print-size;
+}
+
+.howToSetUp {
+  background: lighten($greyLight, 11%);
+  font-size: 80%;
+  padding: 1rem;
+
+  h3 {
+    @extend .typl8-zeta;
+  }
+}
+
+#lessonProcedure {
+  padding-bottom: 56.25%;
+
+  h3 {
+    position: relative;
+  }
+
+  #videoPlayer {
+    position: absolute;
+    transition: all 0.3s ease;
+    width: 44.5vw; //match width of #mainContent...create variable?
+
+    video {
+      transition: none;
+    }
+  }
+}
+
+
+.videoStick #lessonProcedure {
+  padding-bottom: 0;
+
+  h3 {
+    @extend %icon-video;
+    padding-bottom: 56.25%;
+
+    &:before {
+      background-color: lighten($greyLight, 11%);
+      bottom: 0;
+      color: lighten($greyLight, 5%);
+      font-size: 6vw;
+      padding: 20% 0 0;
+      position: absolute;
+      text-align: center;
+      top: 1.7rem;
+      width: 100%;
+      vertical-align: text-bottom;
+    }
+  }
+
+  #videoPlayer {
+    position: fixed;
+    right: 2rem;
+    top: 14px;
+    width: 20% !important;
+    z-index: 10000;
+  }
+}
