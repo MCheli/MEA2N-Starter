@@ -24,13 +24,13 @@
       <article>
         <p>We're lauching a new classroom for IoT skills! Sign up today to get early access.</p>
 
-        <form>
+        <form action="/subscribe" method="post">
           <fieldset>
             <legend>Contact Information</legend>
               <ol>
                 <li id="emailAddress">
-                  <input type="text"  placeholder="Email" />
-                  <button>Sign up</button>
+                  <input type="text" name="email" placeholder="Email" />
+                  <button type="submit" value="Submit">Sign up</button>
                 </li>
               </ol>
           </fieldset>
