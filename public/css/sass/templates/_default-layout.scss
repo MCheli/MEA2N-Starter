@@ -1,12 +1,15 @@
 // Default Layout
 
 body {
-  display: flex;
-  flex-direction: column;
+  bottom: 0;
   font-family: Lato, Arial, sans-serif;
-  max-width: 1920px;
+  left: 0;
   margin: 0 auto;
-  min-height: 100vh;
+  max-width: 1920px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
 }
 
 h1 {
@@ -24,10 +27,11 @@ h1 {
 
 #mainBody {
   background: url(../img/Spaceship4C.jpg) right 0 no-repeat;
-  display: flex;
-  flex: 1;
-  margin: 0;
-  position: relative;
+  bottom: 0;
+  margin: 0 auto;
+  top: 100px;
+  width: 100%;
+  position: absolute;
 
   &:before {
     background-color: #3d4647;
@@ -40,13 +44,19 @@ h1 {
   }
 
   header {
-    flex: 1;
+    bottom: 0;
+    left: 0;
+    max-width: 1920px;
+    position: absolute;
+    right: 0;
+    top: 100px;
   }
 
   h2 {
     color: $white;
+    float: right;
     font-weight: normal;
-    margin: 7rem 1rem 0 45px;
+    margin: 7rem 10rem 0 450px;
     position: relative;
     z-index: 3;
 
@@ -65,14 +75,17 @@ h1 {
 
 article {
   background: $teal;
+  bottom: 50px;
   color: $white;
   padding-top: 3rem;
-  flex: 0 0 22em;
-  order: -1;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  width: 400px;
   z-index: 3;
 
   @include bp(tiny-bear) {
-    flex: none;
+    top: 0;
     width: 100%;
   }
 
@@ -116,7 +129,6 @@ article {
 #courseList {
   list-style: none;
   margin-top: 0;
-  padding: 0 2rem;
 
   li {
     line-height: 130%;
@@ -129,26 +141,31 @@ p+p {
 }
 
 footer {
+  background: url(../img/ptc-logo.svg) 95% 0 no-repeat;
+  background-size: 70px;
   bottom: 0;
   color: $white;
   left: 0;
   margin: 0 auto;
   max-width: 1920px;
-  position: absolute;
+  position: fixed;
   right: 0;
   z-index: 3;
 
   p {
-    background: url(../img/ptc-logo.svg) right 0 no-repeat;
+    background: $teal;
     background-size: contain;
     display: block;
-    height: 30px;
+    height: 40px;
     font-size: 80%;
-    margin: 0 2rem 1rem;
+    margin: 0;
+    padding: 10px 0 0;
+    text-align: center;
+    vertical-align: center;
+    width: 400px;
 
     @include bp(tiny-bear) {
-      background: none;
-      text-align: center;
+      width: 100%;
     }
   }
 }
