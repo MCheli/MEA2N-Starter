@@ -1,0 +1,26 @@
+// Link Hover/Focus/Active Color Changes
+
+@mixin linkStateChange($color) {
+  @extend %transition-ease;
+  color: $color;
+
+  &:hover, &:focus {
+    color: darken($color, $hoverFocusShading);
+  }
+
+  &:active {
+    color: darken($color, $activeShading);
+  }
+}
+
+
+// Links
+
+a {
+  @include linkStateChange($link);
+  text-decoration: none;
+
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,37 @@
+#notesArea {
+  background: lighten($greyLight, 15%);
+  position: relative;
+
+  h1 {
+    @extend .typl8-zeta;
+    color: darken($greyLight, 25%);
+    margin: 0;
+    padding: 1rem 1rem 0;
+  }
+}
+
+.bookMarkLesson {
+  @extend %icon-bookmark;
+  @include fontIconButton(transparent, $greyLight, 20px, 20px);
+  position: absolute;
+  right: 14px;
+  top: 1rem;
+}
+
+#lessonNotes {
+  clear: both;
+  font-size: .8em;
+  padding: 1rem;
+
+  li {
+    margin: 0 0 21px 21px;
+  }
+
+  p {
+    margin-bottom: 4px;
+  }
+
+  time {
+    color: darken($greyLight, 15%);
+  }
+}

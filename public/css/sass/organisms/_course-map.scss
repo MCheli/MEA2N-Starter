@@ -1,0 +1,94 @@
+// Course Map
+
+#contentNavigation {
+  background: lighten($greyLight, 8%);
+  border-right: 1px solid $border;
+
+  ol {
+    list-style-type: none;
+
+    a {
+      display: block;
+      padding: 10px 10px 7px 0;
+      text-decoration: none;
+    }
+
+    ol ol li {
+      margin: 0;
+
+      a {
+        font-size: .9em;
+        padding: 3px 18px 3px 10px;
+      }
+    }
+  }
+
+  > ol {
+    font-size: .9em;
+    margin: 0;
+    padding: 0;
+
+    > li {
+      border-bottom: 2px solid $white;
+      counter-increment: custom-counter;
+      margin: 0;
+      position: relative;
+
+      &:before {
+        content: counter(custom-counter) ".";
+        color: darken($greyLight, 25%);
+        font-size: 1.1em;
+        left: 14px;
+        line-height: 1.2em;
+        position: absolute;
+        text-align: center;
+        top: 12px;
+        width: 22px;
+        z-index: 999;
+      }
+
+      > a {
+        padding-left: 42px;
+      }
+
+      > ol {
+        background: $white;
+        padding: 0 0 5px 0;
+
+        > li {
+          counter-increment: custom-counter-alpha;
+          margin: 0;
+          position: relative;
+
+          &:before {
+            content: counter(custom-counter-alpha, lower-alpha) ".";
+            color: darken($greyLight, 25%);
+            font-size: 1.1em;
+            left: 22px;
+            line-height: 1.2em;
+            position: absolute;
+            text-align: center;
+            top: 12px;
+            width: 22px;
+            z-index: 999;
+          }
+
+          &.active {
+
+            &:before, > a {
+              color: $white;
+            }
+
+            > a {
+              background: $wbt;
+            }
+          }
+
+          > a {
+            padding-left: 50px;
+          }
+        }
+      }
+    }
+  }
+}

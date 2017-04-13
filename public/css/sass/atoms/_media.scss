@@ -1,0 +1,7 @@
+// Basic Audio/Video Settings
+
+audio, video {
+  display: block;
+  width: 100%;
+  -webkit-filter: brightness(108.5%); /* fixes grey background in Chrome - http://stackoverflow.com/questions/16983018/chrome-html5-video-cant-display-white-has-gray-background */
+}

@@ -1,0 +1,35 @@
+// Main Includes File
+
+  // Helpers
+    @import "helpers/vendor/normalize/normalize"; // http://html5boilerplate.com/
+    @import "helpers/colors";
+
+    // Typography
+    @import "helpers/vendor/typeplate/typeplate"; // http://typeplate.com/
+
+    @import "helpers/font-icons";
+    @import "helpers/mixins";
+
+  //Atoms
+    @import "atoms/buttons";
+    @import "atoms/captions";
+    @import "atoms/figures";
+    @import "atoms/forms-elements";
+    @import "atoms/lists";
+    @import "atoms/links";
+    @import "atoms/media";
+    @import "atoms/tables";
+
+  // Molecules
+
+  // Organisms
+    @import "organisms/course-extras";
+    @import "organisms/course-map";
+    @import "organisms/header-viewer";
+    @import "organisms/main-content";
+    @import "organisms/notes";
+
+  // Templates
+    @import "templates/default-layout";
+
+  // Pages

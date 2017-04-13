@@ -1,0 +1,171 @@
+// Default Layout
+
+body {
+  bottom: 0;
+  font-family: Lato, Arial, sans-serif;
+  left: 0;
+  margin: 0 auto;
+  max-width: 1920px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+h1 {
+  @include hiddenText;
+  background: url(../img/iot-university-logo.svg) 0 0 no-repeat;
+  background-size: contain;
+  display: block;
+  height: 90px;
+  width: 300px;
+
+  @include bp(baby-bear) {
+    width: auto;
+  }
+}
+
+#mainBody {
+  background: url(../img/Spaceship4C.jpg) right 0 no-repeat;
+  bottom: 0;
+  margin: 0 auto;
+  top: 100px;
+  width: 100%;
+  position: absolute;
+
+  &:before {
+    background-color: #3d4647;
+    content: '';
+    height: 100%;
+    opacity: .55;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+
+  header {
+    bottom: 0;
+    left: 0;
+    max-width: 1920px;
+    position: absolute;
+    right: 0;
+    top: 100px;
+  }
+
+  h2 {
+    color: $white;
+    float: right;
+    font-weight: normal;
+    margin: 7rem 10rem 0 450px;
+    position: relative;
+    z-index: 3;
+
+    @include bp(baby-bear) {
+      border: 0;
+      clip: rect(0 0 0 0);
+      position: absolute;
+      overflow: hidden;
+      margin: -1px;
+      padding: 0;
+      width: 1px;
+      height: 1px;
+    }
+  }
+}
+
+article {
+  background: $teal;
+  bottom: 50px;
+  color: $white;
+  padding-top: 3rem;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  width: 400px;
+  z-index: 3;
+
+  @include bp(tiny-bear) {
+    top: 0;
+    width: 100%;
+  }
+
+  p {
+    padding: 0 2rem 1rem;
+  }
+
+  legend, label {
+    @extend %visuallyhidden;
+  }
+
+  fieldset {
+    border: none;
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+  }
+
+  input, button {
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px $greyDark;
+    display: inline-block;
+
+    @include bp(tiny-bear) {
+      display: block !important;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+  }
+
+  input {
+    color: $greyDark;
+    margin-right: .2rem;
+    padding: .7rem 4%;
+
+    @include bp(tiny-bear) {
+      width: 92%;
+    }
+  }
+}
+
+#courseList {
+  list-style: none;
+  margin-top: 0;
+
+  li {
+    line-height: 130%;
+    margin-bottom: .8rem;
+  }
+}
+
+p+p {
+  text-indent: 0;
+}
+
+footer {
+  background: url(../img/ptc-logo.svg) 95% 0 no-repeat;
+  background-size: 70px;
+  bottom: 0;
+  color: $white;
+  left: 0;
+  margin: 0 auto;
+  max-width: 1920px;
+  position: fixed;
+  right: 0;
+  z-index: 3;
+
+  p {
+    background: $teal;
+    background-size: contain;
+    display: block;
+    height: 40px;
+    font-size: 80%;
+    margin: 0;
+    padding: 10px 0 0;
+    text-align: center;
+    vertical-align: center;
+    width: 400px;
+
+    @include bp(tiny-bear) {
+      width: 100%;
+    }
+  }
+}
