@@ -1,0 +1,335 @@
+@font-face {
+	font-family: 'Avenir-Book';
+	src:url('../fonts/Avenir-Book.eot');
+	src:url('../fonts/Avenir-Book.eot') format('embedded-opentype'),
+		url('../fonts/Avenir-Book.woff') format('woff'),
+		url('../fonts/Avenir-Book.ttf') format('truetype'),
+		url('../fonts/Avenir-Book.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin fonticon {
+  font-family: 'Avenir-Book';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  padding-right: .3em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin fonticonHiddenText {
+  display: inline-block;
+  position: relative;
+  text-indent: 1000%;
+  white-space: nowrap;
+  overflow: hidden;
+
+   &:before, &:after {
+    display: block;
+    padding: 0 !important;
+    position: absolute;
+    text-indent: 0;
+  }
+}
+
+////////////
+
+%icon-assessment:before {
+  @include fonticon;
+  content: "\e620";
+}
+
+%icon-lesson:before {
+  @include fonticon;
+  content: "\e606";
+}
+
+%icon-learning-path:before {
+  @include fonticon;
+  content: "\e60b";
+}
+
+%icon-mapping:before {
+  @include fonticon;
+  content: "\e613";
+}
+
+%icon-reports:before {
+  @include fonticon;
+  content: "\e611";
+}
+
+%icon-customize:before {
+  @include fonticon;
+  content: "\e610";
+}
+
+%icon-bookmark:before {
+  @include fonticon;
+  content: "\e601";
+}
+
+%icon-custom:before, %icon-custom-addon:after { 
+  @include fonticon;
+  color: tint($yellow, 40%);
+  content: "\e602";
+}
+
+%icon-custom-addon:after {
+  font-size: .6em !important;
+  position: absolute;
+}
+
+%icon-complete:before {
+  @include fonticon;
+  content: "\e603";
+}
+
+%icon-menu:before {
+  @include fonticon;
+  content: "\e604";
+}
+
+%icon-comment:before {
+  @include fonticon;
+  content: "\e615";
+}
+
+%icon-save:before {
+  @include fonticon;
+  content: "\e614";
+}
+
+%icon-delete:before {
+  @include fonticon;
+  content: "\e605";
+}
+
+%icon-class:before {
+  @include fonticon;
+  content: "\e60f";
+}
+
+%icon-arrow-right:before {
+  @include fonticon;
+  content: "\e60a";
+}
+
+%icon-arrow-up:before {
+  @include fonticon;
+  content: "\e609";
+}
+
+%icon-arrow-down:before, %icon-arrow-down-addon:after {
+  @include fonticon;
+  content: "\e608";
+}
+%icon-arrow-left:before {
+  @include fonticon;
+  content: "\e607";
+}
+
+%icon-recently-viewed:before {
+  @include fonticon;
+  content: "\e60d";
+}
+
+%icon-settings:before {
+  @include fonticon;
+  content: "\e60c";
+}
+
+%icon-course:before {
+  @include fonticon;
+  content: "\e612";
+}
+
+%icon-users:before {
+  @include fonticon;
+  content: "\e60e";
+}
+
+%icon-search:before {
+  @include fonticon;
+  content: "\e616";
+}
+
+%icon-assignments:before {
+  @include fonticon;
+  content: "\e600";
+}
+
+%icon-process:before {
+  @include fonticon;
+  content: "\e618";
+}
+
+%icon-file-structure:before {
+  @include fonticon;
+  content: "\e617";
+}
+
+%icon-plus:before {
+  @include fonticon;
+  content: "\e619";
+}
+
+%icon-minus:before {
+  @include fonticon;
+  content: "\e61a";
+}
+
+%icon-single-topic:before {
+  @include fonticon;
+  content: "\f016";
+}
+
+%icon-multiple-topics:before {
+  @include fonticon;
+  content: "\f0c5";
+}
+
+%icon-undo:before {
+  @include fonticon;
+  content: "\e61b";
+}
+
+%icon-trash:before {
+  @include fonticon;
+  content: "\e61c";
+}
+
+%icon-view:before, %icon-view-addon:after {
+  @include fonticon;
+  content: "\e61d";
+}
+
+%icon-revert-iteration:before {
+  @include fonticon;
+  content: "\e61e";
+}
+
+%icon-redo:before {
+  @include fonticon;
+  content: "\e61f";
+}
+
+%icon-create-new:before {
+  @include fonticon;
+  content: "\e621";
+}
+
+%icon-lightbulb:before {
+  @include fonticon;
+  content: "\f0eb";
+}
+
+%icon-image:before {
+  @include fonticon;
+  content: "\e622";
+}
+
+%icon-audio:before {
+  @include fonticon;
+  content: "\e623";
+}
+
+%icon-video:before {
+  @include fonticon;
+  content: "\e624";
+}
+
+%icon-expand:before {
+  @include fonticon;
+  content: "\e625";
+}
+
+%icon-contract:before {
+  @include fonticon;
+  content: "\e626";
+}
+
+%icon-list:before {
+  @include fonticon;
+  content: "\e627";
+}
+
+%icon-numbered-list:before {
+  @include fonticon;
+  content: "\e628";
+}
+
+%icon-attachment:before {
+  @include fonticon;
+  content: "\e629";
+}
+
+%icon-bold:before {
+  @include fonticon;
+  content: "\e62a";
+}
+
+%icon-underline:before {
+  @include fonticon;
+  content: "\e62b";
+}
+
+%icon-italic:before {
+  @include fonticon;
+  content: "\e62c";
+}
+
+%icon-indent-increase:before {
+  @include fonticon;
+  content: "\e62d";
+}
+
+%icon-indent-decrease:before {
+  @include fonticon;
+  content: "\e62e";
+}
+
+%icon-warning:before {
+  @include fonticon;
+  content: "\e62f";
+}
+
+%icon-plus-square:before {
+  @include fonticon;
+  content: "\f0fe";
+}
+
+%icon-minus-square:before {
+  @include fonticon;
+  content: "\f146";
+}
+
+%icon-note:before {
+  @include fonticon;
+  content: "\e630";
+}
+
+%icon-history:before {
+  @include fonticon;
+  content: "\e631";
+}
+
+%icon-graduation:before {
+  @include fonticon;
+  content: "\e633";
+}
+
+%icon-question-circle:before {
+  @include fonticon;
+  content: "\f059";
+}
+
+%icon-wrench:before {
+  @include fonticon;
+  content: "\e632";
+}
